@@ -1,0 +1,10 @@
+<template name="postsList">
+  <div class="posts">
+  	{{#each posts}}
+  	  {{> postItem}}
+  	  <!--the #each block not only iterates over our array, it also sets the value of
+  	  keyword "this" inside the block to the iterated object (posts). So in post_itm.js,
+  	  the keyword "this" refers to the posts object-the helper of the postsList template.-->
+	{{/each}}
+  </div>
+</template>
