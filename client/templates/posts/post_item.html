@@ -4,7 +4,11 @@
   		<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
   		<!--because the postItem template is called in the "#each posts" block,
   	    Meteor knows that url and title refer to this.url and this.title (of the posts helper.-->
-  	    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+  	    <p>
+  	      submitted by {{author}}
+  	      {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+  	    </p>
   	</div>
+  	<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
   </div>
 </template>
